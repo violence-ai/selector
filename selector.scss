@@ -1,0 +1,56 @@
+.selector {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    > .value {
+        height: 30px;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url(/img/ico-drop-arrow.png);
+            background-size: cover;
+            width: 10px;
+            height: 6px;
+            right: 5px;
+        }
+    }
+
+    > .drop-menu {
+        top: 30px;
+        right: 0;
+        width: 140px;
+        position: absolute;
+        background: #32353c;
+        z-index: 1;
+        border-radius: 2px;
+        box-shadow: 0 0 20px #00000052;
+        overflow: hidden;
+
+        // vue-scrollbar
+        > section {
+            max-height: 170px;
+
+            > .option {
+                height: 34px;
+                padding: 0 10px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: #3a3d44;
+                }
+
+                &.active {
+                    background: #3a3d44;
+                }
+            }
+        }
+    }
+}
