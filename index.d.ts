@@ -1,6 +1,7 @@
 interface Option {
-    id: number | null,
-    value: any,
+    id: number | null
+    value: any
+    isActive: boolean
     [key: string] : any
 }
 
